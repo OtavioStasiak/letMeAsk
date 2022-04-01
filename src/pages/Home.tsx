@@ -1,11 +1,16 @@
 import illustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
 import googleIconImg from '../assets/images/google-icon.svg';
-
+import { useHistory } from 'react-router-dom';
 import '../styles/auth.scss';
 import { Button } from '../components/button';
+import {auth, firebase} from '../services/firebase';
+import { useState } from 'react';
+import { useAuth } from '../hooks/authHook';
 
 export function Home(){
+    const history = useHistory();
+    const {signInWithGoogle} = useAuth();
     return(
 
         <div id="page-auth">
@@ -21,7 +26,7 @@ export function Home(){
                 <div className='main-content'>
                     <img src={logoImg} alt="LetMeAsk" />
 
-                    <button className="create-room">
+                    <button onClick={signInWithGoogle} className="create-room">
                         <img src={googleIconImg} alt="Logo do Google" />
                         Crie sua sala com o Google
                     </button>

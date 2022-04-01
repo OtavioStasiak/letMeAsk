@@ -4,8 +4,12 @@ import googleIconImg from '../assets/images/google-icon.svg';
 
 import '../styles/auth.scss';
 import { Button } from '../components/button';
+import { useAuth } from '../hooks/authHook';
 
 export function NewRoom(){
+    const {user} = useAuth();
+
+    console.log(user);
     return(
 
         <div id="page-auth">
