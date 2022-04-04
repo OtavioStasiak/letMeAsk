@@ -5,7 +5,7 @@
 
     aside {
         flex: 7;
-
+        padding-left: 20px;
         background: #835afd;
         color: #fff;
 
@@ -85,8 +85,8 @@
         }
 
         a {
-            color: #e559f9
-        }
+            color: #835afd;
+        };
     };
 
     .create-room {

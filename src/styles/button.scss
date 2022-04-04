@@ -1,5 +1,4 @@
 .button {
-    margin-top: 64px;
     height: 50px;
     border-radius: 8px;
     font-weight: 500;
@@ -19,6 +18,13 @@
     img {
        margin-right: 8px;
     };
+
+    &.outlined {
+        background: #fff;
+        border: 1px solid;
+        border-color: #00b4d8;
+        color: #00b4d8;
+    }
 
     &:not(:disabled):hover {
         filter: brightness(0.9);
